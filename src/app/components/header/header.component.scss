@@ -1,0 +1,25 @@
+.header-page {
+  padding: 15rem 0;
+  &, * {line-height: 1.4;}
+  > div {
+    display: flex;
+    align-items: center;
+    > div {
+      margin-right: 4rem;
+      > span {
+        font-size: var(--font-size-small);
+      }
+      > h1 {
+        font-size: var(--font-size-x-large);
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+      }
+    }
+    > img {
+      width: 53rem;
+      border-radius: 2rem;
+    }
+  }
+}
