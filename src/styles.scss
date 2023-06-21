@@ -1,1 +1,161 @@
 /* You can add global styles to this file, and also import other style files */
+/*BEGIN RESETS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1.4;}
+ol, ul, li {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+a:link, a:visited {text-decoration: none}
+html, body {overflow: hidden;}
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    font-size: 0.52vw;
+    @media(max-width: 480px) {font-size: 2.66vw;}
+}
+* {box-sizing: border-box;}
+/*END RESETS*/
+
+// variaveis de tipogradia
+:root {
+  --font-size-small: 1.6rem; // 16px
+  --font-size-x-small: 1.8rem; // 18px
+  --font-size-medium: 2rem; // 20px
+  --font-size-x-medium: 3.2rem; // 32px
+  --font-size-large: 4rem; // 40px
+  --font-size-x-large: 6.4rem; // 40px
+}
+
+// variaveis de cores
+$color-neutral-100: #050610;
+$color-neutral-200: #030E15;
+$color-neutral-300: #78797A;
+$color-neutral-400: #F6F6F6;
+$color-neutral-500: #EAEAEA;
+$color-primary: #0e9632;
+$color-white: #FFFFFF;
+
+$color-gradient: linear-gradient(118.36deg, #00010C -3.67%, #000107 106.52%);;
+
+
+// array para a criação das classes placeholder de cores
+$colors: () !default;
+$colors: map_merge(
+  (
+      "color-neutral-100": $color-neutral-100,
+      "color-neutral-200": $color-neutral-200,
+      "color-neutral-300": $color-neutral-300,
+      "color-neutral-400": $color-neutral-400,
+      "color-neutral-500": $color-neutral-500,
+      "color-primary": $color-primary,
+      "color-white": $color-white,
+  ), $colors
+);
+$bg-colors: map_merge(
+  (
+      "color-neutral-100": $color-neutral-100,
+      "color-neutral-200": $color-neutral-200,
+      "color-neutral-300": $color-neutral-300,
+      "color-neutral-400": $color-neutral-400,
+      "color-neutral-500": $color-neutral-500,
+      "color-primary": $color-primary,
+      "color-white": $color-white,
+  ), $colors
+);
+
+// predefinições
+body {
+  color: $color-neutral-300;
+  background-color: $color-white;
+  padding: 0 !important;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: var(--font-size-x-small);
+}
+
+::selection {
+  background: $color-neutral-100;
+  color: $color-white;
+}
+
+/*BEGIN CONTAINER*/
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 123rem;
+}
+/*END CONTAINER*/
+
+/*BEGIN IMAGES*/
+.images {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+/*END IMAGES*/
+
+/// begin colors
+@each $color, $value in $colors {
+  .#{$color} {color: #{$value}}
+}
+@each $color, $value in $bg-colors {
+  .bg-#{$color} {background-color: #{$value}}
+}
+.bg-gradient {
+  background: $color-gradient;
+}
+//end colors
+
+/*begin centralize*/
+%centralize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*end centralize*/
+%none {
+  display: none;
+}
+%transition {
+  transition: all .3s linear;
+}
+strong {font-weight: bold;}
+button {
+  outline: none;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+}
+input, textarea, select {
+  padding: 1rem;
+  outline: none;
+  border: 0;
+  width: 100%;
+}
