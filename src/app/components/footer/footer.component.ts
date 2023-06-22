@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContatoService } from 'src/app/services/contato.service';
 
 @Component({
   selector: 'app-footer',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
+  contact:any = null;
 
-  constructor() { }
+  constructor(private contatoService:ContatoService) { }
 
   ngOnInit(): void {
+    this.contatoService.getContato().subscribe(data => {
+      this.contact = data;
+    });
   }
 
 }

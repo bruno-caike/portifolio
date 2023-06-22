@@ -1,6 +1,12 @@
-<footer class="footer-page bg-gradient color-white">
-  <div class="container">
-    <a href="#" class="bg-color-primary color-white">ENTRE EM CONTATO COMIGO</a>
-    <p>@2023 - Todos os direitos reservados</p>
+<footer>
+  <div class="footer-terms bg-gradient color-white">
+    <div class="container">
+      <a href="https://api.whatsapp.com/send?phone=5534999531841" class="bg-color-primary color-white" target="_blank">ENTRE EM CONTATO COMIGO</a>
+      <a href="mailto:{{ contact.contact.email }}?subject={{ contact.subject_matter }}&body={{ contact.comment }}" class="bg-color-primary color-white" target="_blank" *ngIf="contact !== null">
+        ENTRE EM CONTATO COM A ENACOM
+      </a>
+
+      <p>@2023 - Todos os direitos reservados</p>
+    </div>
   </div>
 </footer>

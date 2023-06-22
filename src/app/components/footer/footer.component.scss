@@ -1,4 +1,6 @@
 .footer-page {
+}
+.footer-terms {
   padding: 5rem 0;
   > div {
     display: flex;
@@ -22,6 +24,9 @@
 
 @media(max-width: 600px) {
   .footer-page {
+
+  }
+  .footer-terms {
     padding: 3rem 0;
     > div {
       flex-direction: column;
