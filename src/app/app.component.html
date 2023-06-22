@@ -1,1 +1,68 @@
 <app-header></app-header>
+
+<main>
+  <section class="s-my-differentials">
+    <div class="container">
+      <header>
+        <h2 class="color-neutral-100">Meus diferenciais</h2>
+        <p>
+          <strong class="color-neutral-100">Transformo design</strong> em páginas para a web com agilidade, qualidade e <strong class="color-neutral-100">alta perfomance.</strong>
+        </p>
+      </header>
+      <ul>
+        <li *ngFor="let differential of differentials">
+          <app-card-diffrentials [name]="differential"></app-card-diffrentials>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="s-my-differentials bg-color-neutral-400">
+    <div class="container">
+      <header>
+        <h2 class="color-neutral-100">Minhas Hard Skills</h2>
+      </header>
+      <ul>
+        <li *ngFor="let hard of hards">
+          <app-card-diffrentials [name]="hard" [dark]="true"></app-card-diffrentials>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="s-my-differentials">
+    <div class="container">
+      <header>
+        <h2 class="color-neutral-100">Meus Cursos</h2>
+      </header>
+      <ul>
+        <li *ngFor="let course of courses">
+          <app-card-diffrentials [name]="course"></app-card-diffrentials>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="s-example-project bg-color-neutral-400">
+    <div class="container">
+      <header>
+        <h2 class="color-neutral-100">Exemplo de Projeto</h2>
+      </header>
+      <section>
+        <img src="../assets/og-logo-imagino.jpg" alt="Imaginô Cakes" title="Imaginô Cakes" class="images">
+        <div>
+          <header>
+            <h3 class="color-neutral-100">Imaginô Cakes</h3>
+            <p>Site foi criado para uma empresa de delivey de doces. neste projeto foi criado o site e feito um painel para gerenciamento das informações com dashboards e gráficos.</p>
+          </header>
+          <ul>
+            <li *ngFor="let tech of techs">
+              <app-card-diffrentials [name]="tech" [dark]="true"></app-card-diffrentials>
+            </li>
+          </ul>
+          <a href="https://imaginocakes.com/" target="_blank" class="color-neutral-100">VER PROJETO</a>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>

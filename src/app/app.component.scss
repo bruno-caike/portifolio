@@ -1,0 +1,74 @@
+// begin s-my-differentials
+.s-my-differentials {
+  padding: 10rem 0;
+  > div {
+    > header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6.4rem;
+      > h2 {
+        font-size: var(--font-size-x-medium);
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+      }
+      > p {
+        max-width: 38.5rem;
+        font-size: var(--font-size-small);
+      }
+    }
+    > ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1.5rem;
+    }
+  }
+}
+// end s-my-differentials
+
+// begin s-example-project
+.s-example-project {
+  padding: 10rem 0;
+  > div {
+    > header {
+      margin-bottom: 6.4rem;
+      > h2 {
+        font-size: var(--font-size-large);
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+      }
+    }
+    > section {
+      display: grid;
+      grid-template-columns: 40rem 1fr;
+      grid-gap: 4rem;
+      > img {
+        border-radius: 2rem;
+      }
+      > div {
+        > header {
+          margin-bottom: 5rem;
+          > h3 {
+            font-size: var(--font-size-x-medium);
+            font-weight: 600;
+            font-family: "Poppins", sans-serif;
+            margin-bottom: 2rem;
+          }
+        }
+        > ul {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 1.5rem;
+          margin-bottom: 3rem;
+        }
+        > a {
+          transition: all .3s linear;
+          font-weight: bold;
+          &:hover {
+            color: #0e9632;
+          }
+        }
+      }
+    }
+  }
+}
+// end s-example-project
