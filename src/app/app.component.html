@@ -33,6 +33,20 @@
     </div>
   </section>
 
+  <section class="s-expreriences bg-gradient color-white">
+    <div class="container">
+      <header>
+        <h2>Minhas Experiências Profissionais</h2>
+      </header>
+      <ul>
+        <li *ngFor="let experience of experiences">
+          <app-card-experience [title]="experience.title" [content]="experience.content"></app-card-experience>
+        </li>
+      </ul>
+      <app-form-experience></app-form-experience>
+    </div>
+  </section>
+
   <section class="s-my-differentials">
     <div class="container">
       <header>

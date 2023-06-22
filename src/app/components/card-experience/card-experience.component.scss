@@ -1,0 +1,15 @@
+// begin card-experience
+.card-experience {
+  > header {
+    margin-bottom: 1rem;
+    > h3 {
+      font-size: var(--font-size-medium);
+      font-weight: 600;
+      font-family: "Poppins", sans-serif;
+    }
+  }
+  > div {
+    font-size: var(--font-size-small);
+  }
+}
+// end card-experience

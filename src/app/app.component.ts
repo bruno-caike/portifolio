@@ -18,4 +18,9 @@ export class AppComponent {
   techs = [
     'HTML', 'CSS', 'SASS', 'Bootstrap', 'Javascript', 'PHP', 'Laravel', 'Lumen', "MYSQL"
   ];
+  experiences = [
+    {title: 'Desenvolvedor Web Junior na Dois Comunicação (Julho 2020 - até o momento)', content: "Suporte aos usuários finais, Desenvolvimento e manutenção de websites, sistemas e aplicativos mobile."},
+    {title: 'Estagio em desenvolvimento Web na Dois Comunicação (Janeiro 2020 - Junho 2020)', content: "Desenvolvimento e manutenção de websites e sistemas."},
+    {title: 'Auxiliar de Suporte na Zember Tecnologia (Agosto 2019 - Novembro 2019)', content: "Auxiliar de produção, Suporte aos usuários finais e Conversão de banco de dados."},
+  ]
 }

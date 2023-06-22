@@ -25,6 +25,31 @@
 }
 // end s-my-differentials
 
+// begin s-expreriences
+.s-expreriences {
+  padding: 10rem 0;
+  > div {
+    > header {
+      margin-bottom: 4rem;
+      > h2 {
+        font-size: var(--font-size-x-medium);
+        font-weight: 600;
+        font-family: "Poppins", sans-serif;
+      }
+    }
+    > ul {
+      > li {
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+          padding-bottom: 2rem;
+          border-bottom: .1rem solid #FFF;
+        }
+      }
+    }
+  }
+}
+// end s-expreriences
+
 // begin s-example-project
 .s-example-project {
   padding: 10rem 0;
@@ -116,6 +141,14 @@
             margin-bottom: 2.5rem;
           }
         }
+      }
+    }
+  }
+  .s-expreriences {
+    padding: 6rem 0;
+    > div {
+      > header {
+        margin-bottom: 3rem;
       }
     }
   }
