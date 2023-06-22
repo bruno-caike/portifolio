@@ -33,8 +33,15 @@ html, body {overflow: hidden;}
 html {
     overflow-y: scroll;
     scroll-behavior: smooth;
-    font-size: 0.52vw;
-    @media(max-width: 480px) {font-size: 2.66vw;}
+    font-size: 62.5%;
+    @media(min-width: 2000px) {font-size: 0.52vw;}
+    @media(max-width: 1400px) {font-size: 55.5%;}
+    @media(max-width: 1200px) {font-size: 50%;}
+    @media(max-width: 1000px) {font-size: 44%;}
+    @media(max-width: 900px) {font-size: 40%;}
+    @media(max-width: 800px) {font-size: 35%;}
+    @media(max-width: 700px) {font-size: 30%;}
+    @media(max-width: 600px) {font-size: 2.66vw;}
 }
 * {box-sizing: border-box;}
 /*END RESETS*/
@@ -47,6 +54,12 @@ html {
   --font-size-x-medium: 3.2rem; // 32px
   --font-size-large: 4rem; // 40px
   --font-size-x-large: 6.4rem; // 40px
+  @media(max-width: 600px) {
+    --font-size-small: 1.3rem; // 16px
+    --font-size-x-small: 1.5rem; // 18px
+    --font-size-medium: 1.6rem; // 20px
+    --font-size-x-large: 3rem; // 40px
+  }
 }
 
 // variaveis de cores
@@ -108,6 +121,10 @@ body {
   margin: 0 auto;
   width: 100%;
   max-width: 123rem;
+  @media(max-width: 600px) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 /*END CONTAINER*/
 
