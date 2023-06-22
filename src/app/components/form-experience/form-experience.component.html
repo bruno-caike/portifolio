@@ -1,16 +1,22 @@
 
-<article class="article-experience">
+<article class="article-experience" [ngClass]="finally ? 'finally' : ''">
   <header>
     <h3>Adicionar Nova Experiência</h3>
   </header>
-  <form action="">
+  <form (ngSubmit)="submit()" [formGroup]="experienceForm" #formDir="ngForm">
     <div class="form-group">
       <label for="title">Título:</label>
-      <input type="text" name="title" placeholder="Digite um título" required>
+      <input type="text" name="title" placeholder="Digite um título" formControlName="title" required>
+      <div *ngIf="title.invalid && formDir.submitted">
+        <p>O título é obrigatório!</p>
+      </div>
     </div>
     <div class="form-group">
       <label for="title">Conteúdo:</label>
-      <textarea name="content" placeholder="Digite uma mensagem" required></textarea>
+      <textarea name="content" placeholder="Digite uma mensagem" formControlName="content" required></textarea>
+      <div *ngIf="content.invalid && formDir.submitted">
+        <p>O conteudo é obrigatório!</p>
+      </div>
     </div>
     <button type="submit" class="color-white bg-color-primary">Acicionar</button>
   </form>

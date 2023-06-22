@@ -1,6 +1,7 @@
 // begin article-experience
 .article-experience {
   padding-top: 7rem;
+  &.finally {display: none;}
   > header {
     margin-bottom: 2rem;
     > h3 {
@@ -14,6 +15,7 @@
     display: grid;
     grid-gap: 2rem;
     .form-group {
+      display: grid ;
       > label {
         display: block;
         font-weight: 600;
@@ -39,6 +41,24 @@
       }
       > textarea {
         min-height: 20rem;
+      }
+      > div {
+        font-size: 1.2rem;
+        color: red;
+        margin: .5rem 1rem 0 1rem;
+      }
+    }
+    > button[type="submit"] {
+      width: 20rem;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: .5rem;
+      transition: all .3s linear;
+      font: 600 var(--font-size-x-small) "Inter";
+      &:hover {
+        background-color: darken(#0e9632, 10%);
       }
     }
   }
