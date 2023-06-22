@@ -5,6 +5,9 @@
       font-size: var(--font-size-x-medium);
       font-weight: 600;
       font-family: "Poppins", sans-serif;
+      > span {
+        font-size: 1.3rem;
+      }
     }
   }
   > div {

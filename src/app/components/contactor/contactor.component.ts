@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-contactor',
@@ -9,6 +9,8 @@ export class ContactorComponent implements OnInit {
   value: number = 0;
   @Input() total: number = 0;
   finally: boolean = false;
+  count: number = 0;
+  wordsContactor: string = '';
 
   decrement() {
     if (this.value > 0 && this.value <= this.total) {
@@ -33,6 +35,6 @@ export class ContactorComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.wordsContactor = 'Iniciamos a contagem';
   }
-
 }
