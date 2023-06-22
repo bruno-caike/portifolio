@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CardDiffrentialsComponent } from './components/card-diffrentials/card-diffrentials.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ContactorComponent } from './components/contactor/contactor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CardDiffrentialsComponent,
-    FooterComponent
+    FooterComponent,
+    ContactorComponent
   ],
   imports: [
     BrowserModule,

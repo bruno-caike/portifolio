@@ -1,0 +1,13 @@
+<article class="article-contactor">
+  <header>
+    <h3 class="color-neutral-100">Contator das Minhas Hard Skills</h3>
+  </header>
+  <div>
+    <button class="bg-color-neutral-100 color-white" (click)="decrement()">-</button>
+    <input type="number" [value]="value" min="0" readonly>
+    <button class="bg-color-neutral-100 color-white" (click)="increment()">+</button>
+  </div>
+  <p [ngClass]="finally ? 'active' : ''">
+    Parabens você chegou ao número correto de Hard Skills
+  </p>
+</article>

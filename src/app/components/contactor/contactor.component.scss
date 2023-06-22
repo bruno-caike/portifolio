@@ -1,0 +1,43 @@
+.article-contactor {
+  margin-top: 4rem;
+  > header {
+    > h3 {
+      font-size: var(--font-size-x-medium);
+      font-weight: 600;
+      font-family: "Poppins", sans-serif;
+    }
+  }
+  > div {
+    margin-top: 2rem;
+    max-width: 30rem;
+    gap: .5rem;
+    &, > button {
+      display: flex;
+      align-items: center;
+    }
+    > button, > input {
+      height: 4rem;
+      border-radius: .5rem;
+    }
+    > button {
+      width: 4rem;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.8rem;
+      transition: all .3s linear;
+      &:hover {
+        background-color: #0e9632;
+      }
+    }
+  }
+  > p {
+    transition: all .3s linear;
+    opacity: 0;
+    pointer-events: none;
+    &.active {
+      margin-top: 2rem;
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
