@@ -19,3 +19,17 @@
     }
   }
 }
+
+@media(max-width: 600px) {
+  .footer-page {
+    padding: 3rem 0;
+    > div {
+      flex-direction: column;
+      text-align: center;
+      font-size: 1.2rem;
+      > a {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
