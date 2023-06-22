@@ -72,3 +72,51 @@
   }
 }
 // end s-example-project
+
+@media(max-width: 600px) {
+  .s-my-differentials {
+    padding: 6rem 0;
+    > div {
+      > header {
+        flex-direction: column;
+        margin-bottom: 3rem;
+        > p {
+          margin-top: 1.5rem;
+        }
+      }
+      > ul {
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+      }
+    }
+  }
+  .s-example-project {
+    padding: 6rem 0;
+    > div {
+      > header {
+        margin-bottom: 3rem;
+      }
+      > section {
+        grid-template-columns: 1fr;
+        grid-gap: 2.5rem;
+        > img {
+          border-radius: 1rem;
+        }
+        > div {
+          > header {
+            margin-bottom: 3rem;
+            > h3 {
+              margin-bottom: 1.5rem;
+            }
+          }
+          > ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 1rem;
+            margin-bottom: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}
